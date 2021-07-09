@@ -25,7 +25,6 @@ const App: React.FC<TypeAppReduxProps> = (props: TypeAppReduxProps) => {
     }, [onInitReservationForm, data, error]);
 
     const renderStep = () => {
-        console.log('stepsState', stepsState);
         if (stepsState.currentStep === 0) {
             return <HotelDate stepChangeHandler={stepChangeHandler} />;
         }
