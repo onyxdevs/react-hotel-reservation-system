@@ -1,0 +1,15 @@
+@import '../../lib/styles/abstracts/variables.scss';
+@import '../../lib/styles/abstracts/mixins.scss';
+
+.steps {
+    display: flex;
+    margin: 1rem auto;
+    padding: 1rem 0 0;
+    max-width: 800px;
+
+    @include md {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        padding: 2rem 3rem;
+    }
+}

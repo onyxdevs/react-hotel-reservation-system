@@ -1,0 +1,52 @@
+@import './abstracts/variables.scss';
+@import './abstracts/mixins.scss';
+
+html {
+    background-color: $bg-color;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    font-size: 16px;
+    line-height: 1.6;
+    color: $font-dark-color;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    width: 100vw;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 $container-spacing $container-spacing;
+}
+
+.error-handler {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $danger-color;
+}
+
+/* Change Autocomplete styles in Chrome
+*****************************************/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    -webkit-text-fill-color: $font-dark-color;
+    box-shadow: 0 0 0px 1000px #fff inset;
+    -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+    transition: background-color 5000s ease-in-out 0s, border 0.15s cubic-bezier(0.81, 0.16, 0.19, 0.9),
+        box-shadow 0.15s cubic-bezier(0.81, 0.16, 0.19, 0.9);
+}

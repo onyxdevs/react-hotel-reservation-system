@@ -1,0 +1,37 @@
+@import '../../../lib/styles/abstracts/variables.scss';
+@import '../../../lib/styles/abstracts/mixins.scss';
+
+.finish {
+    display: flex;
+    flex-direction: column;
+
+    &__content {
+        text-align: center;
+    }
+
+    &__img-wrapper {
+        width: 8rem;
+        margin: 0 auto;
+    }
+    &__title {
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin-top: 1.5rem;
+        line-height: 1.3;
+    }
+    &__text {
+        max-width: 80%;
+        margin: 0.75rem auto 0;
+    }
+    &__actions {
+        margin: 0.5rem 0 2rem;
+
+        & > button {
+            margin: 0.5rem;
+
+            @include md {
+                margin: 1rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+@import '../../../lib/styles/abstracts/variables.scss';
+@import '../../../lib/styles/abstracts/mixins.scss';
+
+.preview-payment {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+    grid-auto-flow: dense;
+
+    @include md {
+        grid-gap: 3rem;
+        grid-template-columns: 54% calc(46% - 3rem);
+    }
+
+    &__card {
+        perspective: 1000px;
+    }
+    &__form {
+        .credit-card-icon {
+            height: 1.9375rem;
+            position: absolute;
+            right: 0.4375rem;
+            top: 2.125rem;
+            width: auto;
+            margin: 0;
+            z-index: 1;
+            pointer-events: none;
+        }
+    }
+    &__details {
+        grid-row-end: span 2;
+        order: 3;
+
+        @include md {
+            order: 0;
+        }
+    }
+}

@@ -1,0 +1,148 @@
+@import '../../../lib/styles/abstracts/variables.scss';
+@import '../../../lib/styles/abstracts/mixins.scss';
+
+.select {
+    min-width: 180px;
+    width: 100%;
+
+    & &__control {
+        border: 1px solid rgba(lighten($font-dark-color, 20%), 0.2);
+        border-radius: 8px;
+        color: $font-dark-color;
+        min-height: 42px;
+
+        $selector: nth(&, 1);
+        $direct-parent: nth($selector, length($selector));
+
+        @at-root #{$direct-parent} {
+            .select:not(.select--invalid) &--is-focused {
+                border-color: $primary-accent;
+                box-shadow: 0px 0px 0px 3px rgba($primary-accent, 0.15);
+            }
+
+            .select:not(.select--invalid) &:not(.select__control--is-focused):hover {
+                border-color: rgba(lighten($font-dark-color, 15%), 0.4);
+            }
+
+            .select--invalid & {
+                border-color: $danger-color;
+            }
+            .select.select--invalid &--is-focused,
+            .select--invalid &:hover {
+                border-color: $danger-color;
+                box-shadow: 0px 0px 0px 3px rgba($danger-color, 0.15);
+            }
+        }
+    }
+    & &__placeholder {
+        color: rgba($font-dark-color, 0.5);
+        margin: 0;
+    }
+    & &__indicator-separator {
+        margin-top: 0;
+        margin-bottom: 0;
+        background-color: rgba(lighten($font-dark-color, 20%), 0.2);
+    }
+    & &__indicator {
+        padding: 8px 11px 8px 10px;
+        line-height: 0;
+    }
+    &__indicator-icon {
+        font-size: 1.125rem;
+        color: rgba($font-dark-color, 0.5);
+    }
+    & &__value-container {
+        padding: 5px 14px;
+    }
+    & &__input {
+        // position: absolute;
+        margin-left: -2px;
+    }
+    & &__single-value {
+        color: $font-dark-color;
+        overflow: visible;
+        margin: 0;
+        display: flex;
+        align-items: center;
+
+        & span {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+    }
+    & &__menu {
+        border: 1px solid rgba(lighten($font-dark-color, 20%), 0.2);
+        box-shadow: 0px 2px 5px 0px rgba(darken($primary-accent, 15%), 0.075);
+    }
+    & &__option {
+        display: flex;
+        align-items: center;
+
+        &--is-focused {
+            background-color: lighten(rgba($font-dark-color, 0.05), 13%);
+        }
+        &--is-selected {
+            background-color: $primary-accent;
+            color: #fff;
+        }
+
+        & > span {
+            margin-right: 10px;
+            width: 15px;
+            height: 15px;
+        }
+    }
+
+    & &__clear-icon {
+        font-size: 1.125rem;
+        color: rgba($font-dark-color, 0.5);
+        display: flex;
+        align-items: center;
+    }
+
+    & &__value-container--is-multi#{&}__value-container--has-value {
+        padding: 5px 12px;
+    }
+    & &__value-container--is-multi#{&}__value-container--has-value &__input {
+        margin-left: 2px;
+    }
+    & &__multi-value {
+        border-radius: 8px;
+        padding: 1px 3px;
+        background-color: darken(rgba($font-dark-color, 0.075), 10%);
+
+        &__label {
+            border-radius: 0;
+            color: inherit;
+            font-size: 0.8125rem;
+            line-height: 1;
+            padding: 5px 7px;
+
+            display: flex;
+            align-items: center;
+
+            & > span {
+                margin-right: 8px;
+                width: 15px;
+                height: 15px;
+            }
+        }
+        &__remove {
+            margin: 3px 0 2px;
+            border-radius: 7px;
+            transition: background 0.1s ease-in-out, color 0.15s ease-in-out;
+
+            &:active,
+            &:hover {
+                color: $danger-color;
+                background-color: rgba-to-rgb(rgba($danger-color, 0.15));
+                cursor: pointer;
+            }
+            &:active {
+                box-shadow: 0px 0px 0px 3px rgba-to-rgb(rgba($danger-color, 0.25));
+            }
+        }
+    }
+}

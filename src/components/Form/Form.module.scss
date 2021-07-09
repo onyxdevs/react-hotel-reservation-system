@@ -1,0 +1,126 @@
+@import '../../lib/styles/abstracts/variables.scss';
+@import '../../lib/styles/abstracts/mixins.scss';
+
+.form {
+    width: 100%;
+
+    &__wide-row {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-bottom: 22px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        > div {
+            flex-grow: 1;
+            flex-basis: 100%;
+        }
+        > *:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+
+        @include md {
+            > div {
+                flex-basis: 0;
+            }
+            > *:not(:last-child) {
+                margin-right: 1rem;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__have-two {
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: 40% !important;
+
+        & > span {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+
+        & > div {
+            min-width: auto;
+            flex: 0 0 calc(50% - 12px);
+            width: calc(50% - 12px);
+
+            &:last-child {
+                margin-left: 12px;
+            }
+        }
+    }
+
+    &__label {
+        width: 100%;
+        display: block;
+        color: $font-dark-color;
+        letter-spacing: 0.02rem;
+        line-height: 1;
+        font-weight: 500;
+        margin-bottom: 11px !important;
+    }
+
+    &__checkboxes-wrapper {
+        & > *:not(:last-child) {
+            margin-bottom: 8px;
+        }
+    }
+
+    &__section {
+        &__title {
+            font-size: 1.125rem;
+            width: 100%;
+            margin-top: 2.25rem;
+            padding-bottom: 1.125rem;
+            border-bottom: 1px solid $border-color;
+        }
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        color: $dark-text-on-light-bg;
+        line-height: 1.3;
+        font-size: 0.8125rem;
+
+        & p:first-of-type {
+            margin-top: 8px;
+        }
+        & p:not(:first-of-type) {
+            margin-top: 3px;
+        }
+
+        &__invalid-text {
+            color: $danger-color;
+        }
+
+        &__warning-text {
+            color: $warning-color;
+        }
+
+        &__content {
+            flex-grow: 1;
+        }
+    }
+
+    &__error {
+        color: $danger-color;
+        font-weight: 500;
+        margin-top: 2rem;
+    }
+
+    &__actions {
+        display: flex;
+        justify-content: flex-end;
+        margin: 1.75rem -10px 0;
+
+        & > * {
+            margin: 0 10px;
+        }
+    }
+}

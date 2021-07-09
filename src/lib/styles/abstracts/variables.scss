@@ -1,0 +1,28 @@
+/* Background
+*************************************/
+$bg-color: #f5f9fd;
+$bg-dark-color: #222535;
+
+/* Colors
+*************************************/
+$font-light-color: #fcf5f3;
+$font-dark-color: #14226b;
+$primary-accent: #1276ff;
+$dark-text-on-light-bg: rgba(lighten($font-dark-color, 5%), 0.5);
+$success-color: #35c636;
+$danger-color: #ed2554;
+$warning-color: #de9c3e;
+
+/* Spacings
+*************************************/
+$container-spacing: 5vw;
+
+/* Borders
+*************************************/
+$border-color: rgba(darken($primary-accent, 15%), 0.15);
+$border-radius: 0.875rem;
+
+/* Shadows
+*************************************/
+$portlet-shadow: 0px 2px 5px 0px rgba(0, 42, 138, 0.03);
+$portlet-shadow-thick: 0px 5px 12px 0px rgba(darken($primary-accent, 15%), 0.075);

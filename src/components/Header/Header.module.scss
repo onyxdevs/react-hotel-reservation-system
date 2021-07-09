@@ -1,0 +1,42 @@
+@import '../../lib/styles/abstracts/variables.scss';
+@import '../../lib/styles/abstracts/mixins.scss';
+
+.header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 2rem;
+    background-color: $bg-dark-color;
+
+    @include sm {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    &__logo {
+        display: flex;
+        flex-direction: column;
+        line-height: 1;
+        color: white;
+        padding: 1rem 0;
+
+        &__title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        &__slogan {
+            margin-top: 0.25rem;
+            font-weight: 700;
+            font-size: 0.75rem;
+            letter-spacing: 0.0125rem;
+        }
+    }
+    &__actions {
+        margin: 1rem auto 2rem;
+
+        @include sm {
+            margin: 0 0 0 auto;
+        }
+    }
+}

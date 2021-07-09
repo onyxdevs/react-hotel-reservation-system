@@ -1,0 +1,136 @@
+/************************************************************
+
+    Sass mixins
+
+*************************************************************/
+
+/* CSS breakpoints
+*************************************/
+
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 568px; //576px
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
+// Large desktops
+$screen-xxl-min: 1400px;
+
+// Small devices
+@mixin sm {
+    @media (min-width: #{$screen-sm-min}) {
+        @content;
+    }
+}
+
+// Medium devices
+@mixin md {
+    @media (min-width: #{$screen-md-min}) {
+        @content;
+    }
+}
+
+// Large devices
+@mixin lg {
+    @media (min-width: #{$screen-lg-min}) {
+        @content;
+    }
+}
+
+// Extra large tablets
+@mixin xl {
+    @media (min-width: #{$screen-xl-min}) {
+        @content;
+    }
+}
+
+// Extra large desktops
+@mixin xxl {
+    @media (min-width: #{$screen-xxl-min}) {
+        @content;
+    }
+}
+
+/* Position absolute center
+*************************************/
+@mixin abs-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Position
+*************************************/
+// Helper mixin for offset positioning
+// About: http://hugogiraudel.com/2013/08/05/offsets-sass-mixin/
+@mixin position($position, $args: ()) {
+    $offsets: top right bottom left;
+    position: $position;
+
+    @each $offset in $offsets {
+        // All this code happens inside the loop
+        $index: index($args, $offset);
+
+        // If offset is found in the list
+        @if $index {
+            // If it is found at last position
+            @if $index == length($args) {
+                #{$offset}: 0;
+            }
+
+            // If it is followed by a value
+            @else {
+                $next: nth($args, $index + 1);
+
+                // If the next value is value length
+                @if is-valid-length($next) {
+                    #{$offset}: $next;
+                }
+
+                // If the next value is another offset
+                @else if index($offsets, $next) {
+                    #{$offset}: 0;
+                }
+
+                // If it is invalid
+                @else {
+                    @warn "Invalid value `#{$next}` for offset `#{$offset}`.";
+                }
+            }
+        }
+    }
+}
+
+// Function checking if $value is a valid length
+@function is-valid-length($value) {
+    @return (type-of($value) == 'number' and not unitless($value)) or
+        (index(auto initial inherit unset 0, $value) != false and index(auto initial inherit unset 0, $value) != null);
+}
+
+// Shorthands
+// ---
+
+@mixin absolute($args...) {
+    @include position(absolute, $args...);
+}
+
+@mixin fixed($args...) {
+    @include position(fixed, $args...);
+}
+
+@mixin relative($args...) {
+    @include position(relative, $args...);
+}
+
+// Convert an RGBA color to its RGB look-alike
+@function rgba-to-rgb($rgba, $background: #fff) {
+    @return mix(rgb(red($rgba), green($rgba), blue($rgba)), $background, alpha($rgba) * 100%);
+}

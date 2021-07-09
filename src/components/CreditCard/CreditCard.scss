@@ -1,0 +1,193 @@
+@import '../../lib/styles/abstracts/variables.scss';
+@import '../../lib/styles/abstracts/mixins.scss';
+
+.credit-card {
+    position: relative;
+    width: 100%;
+    padding-bottom: 62%;
+    max-width: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    cursor: pointer;
+
+    /* FLIP ANIMATION */
+    &__front-wrapper,
+    &__back-wrapper {
+        position: absolute;
+        width: 100%;
+        max-width: 100%;
+        backface-visibility: hidden;
+        color: #47525d;
+    }
+
+    &__back-wrapper,
+    &--flipped {
+        transform: rotateY(180deg);
+    }
+
+    &__single {
+        position: absolute;
+        right: 15px;
+        top: 20px;
+        transition: opacity 0.15s ease-in-out;
+        img {
+            width: auto;
+            height: 4.5rem;
+        }
+    }
+    &--flipped &__single {
+        opacity: 0;
+    }
+    &__front,
+    &__back {
+        width: 100%;
+        box-shadow: 1px 5px 6px 0 rgba($font-dark-color, 0.15);
+        border-radius: 22px;
+    }
+
+    /* CHANGEABLE CARD ELEMENTS */
+    .lightcolor,
+    .darkcolor {
+        transition: fill 0.5s;
+    }
+    .lightblue {
+        fill: #03a9f4;
+    }
+    .lightbluedark {
+        fill: #0288d1;
+    }
+    .red {
+        fill: #ef5350;
+    }
+    .reddark {
+        fill: #d32f2f;
+    }
+    .purple {
+        fill: #ab47bc;
+    }
+    .purpledark {
+        fill: #7b1fa2;
+    }
+    .cyan {
+        fill: #b7f7ff;
+    }
+    .cyandark {
+        fill: #77cfda;
+    }
+    .green {
+        fill: #66bb6a;
+    }
+    .greendark {
+        fill: #388e3c;
+    }
+    .lime {
+        fill: #d4e157;
+    }
+    .limedark {
+        fill: #afb42b;
+    }
+    .yellow {
+        fill: #ffeb3b;
+    }
+    .yellowdark {
+        fill: #f9a825;
+    }
+    .orange {
+        fill: #ff9800;
+    }
+    .orangedark {
+        fill: #ef6c00;
+    }
+    .grey {
+        fill: #bdbdbd;
+    }
+    .greydark {
+        fill: #616161;
+    }
+
+    /* FRONT OF CARD */
+    &__holder {
+        text-transform: uppercase;
+    }
+    &__front .st2 {
+        fill: #ffffff;
+    }
+    &__front .st3 {
+        font-family: monospace;
+        font-weight: 600;
+    }
+    &__front .st4 {
+        font-size: 54.7817px;
+    }
+    &__front .st5 {
+        font-family: monospace;
+        font-weight: 400;
+    }
+    &__front .st6 {
+        font-size: 33.1112px;
+    }
+    &__front .st7 {
+        opacity: 0.6;
+        fill: #ffffff;
+    }
+    &__front .st8 {
+        font-size: 24px;
+    }
+    &__front .st9 {
+        font-size: 36.5498px;
+    }
+    &__front .st10 {
+        font-family: monospace;
+        font-weight: 300;
+    }
+    &__front .st11 {
+        font-size: 16.1716px;
+    }
+    &__front .st12 {
+        fill: #4c4c4c;
+    }
+
+    /* BACK OF CARD */
+    &__back .st0 {
+        fill: none;
+        stroke: #0f0f0f;
+        stroke-miterlimit: 10;
+    }
+    &__back .st2 {
+        fill: #111111;
+    }
+    &__back .st3 {
+        fill: #f2f2f2;
+    }
+    &__back .st4 {
+        fill: #d8d2db;
+    }
+    &__back .st5 {
+        fill: #c4c4c4;
+    }
+    &__back .st6 {
+        font-family: monospace;
+        font-weight: 400;
+    }
+    &__back .st7 {
+        font-size: 27px;
+    }
+    &__back .st8 {
+        opacity: 0.6;
+    }
+    &__back .st9 {
+        fill: #ffffff;
+    }
+    &__back .st10 {
+        font-size: 24px;
+    }
+    &__back .st11 {
+        fill: #eaeaea;
+    }
+    &__back .st12 {
+        font-family: cursive;
+    }
+    &__back .st13 {
+        font-size: 37.769px;
+    }
+}

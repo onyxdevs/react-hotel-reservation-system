@@ -1,0 +1,80 @@
+@import '../../../lib/styles/abstracts/variables.scss';
+@import '../../../lib/styles/abstracts/mixins.scss';
+
+.image-checkboxes {
+    width: 100%;
+
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -8px;
+    }
+}
+
+.image-checkbox {
+    position: relative;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 8px;
+
+    @include sm {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    @include md {
+        flex: 0 0 calc(100% / 3);
+        max-width: calc(100% / 3);
+    }
+
+    &__field {
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    &__label {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid $border-color;
+        border-radius: calc(#{$border-radius} * 0.8);
+        padding: 1rem 1.25rem;
+        width: 100%;
+        height: 100%;
+        line-height: 1.3;
+        transition: border 0.15s ease-in-out;
+
+        &:hover {
+            border-color: rgba($primary-accent, 0.4);
+            cursor: pointer;
+        }
+
+        &__title {
+            font-size: 1rem;
+            color: $font-dark-color;
+            letter-spacing: 0.025rem;
+        }
+
+        &__img-wrapper {
+            margin-top: 0.75rem;
+            width: 100%;
+        }
+        &__img {
+            width: 100%;
+        }
+
+        &__meta {
+            display: flex;
+            margin-top: 1rem;
+            margin-bottom: 0;
+            font-size: 0.875rem;
+            justify-content: space-between;
+            font-weight: 500;
+        }
+    }
+    &__field:checked + &__label {
+        border-color: $success-color;
+    }
+    &__field:checked + &__label:hover {
+        cursor: not-allowed;
+    }
+}

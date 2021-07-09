@@ -1,0 +1,38 @@
+@import '../../lib/styles/abstracts/variables.scss';
+@import '../../lib/styles/abstracts/mixins.scss';
+
+.loader-abs {
+    @include absolute(top 0 right 0 bottom 0 left 0);
+    background-color: $bg-color;
+    z-index: 50;
+}
+.loader-abs .loader {
+    position: absolute;
+    top: calc(50% - 55px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-right: -50%;
+}
+
+.loader {
+    display: block;
+    font-size: 0;
+    text-indent: -99999em;
+    margin: 55px auto;
+    width: 50px;
+    height: 50px;
+}
+.loader > :first-child {
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(0, 0, 0, 0.15);
+    border-radius: 50%;
+    border-top-color: $primary-accent;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
