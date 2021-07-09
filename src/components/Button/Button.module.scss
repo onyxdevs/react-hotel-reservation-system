@@ -162,4 +162,8 @@
             background-color: darken(rgba($font-dark-color, 0.15), 5%) !important;
         }
     }
+
+    > div {
+        margin: 0 auto;
+    }
 }
