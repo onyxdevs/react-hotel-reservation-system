@@ -9,7 +9,7 @@ type TypeTextFieldProps = {
     id: string;
     onChange: (id: string, value: any, validity: boolean) => void;
     value?: string;
-    validity: boolean;
+    validity?: boolean;
     validators?: TypeValidator[];
     isTouched?: boolean;
     type: 'text' | 'date' | 'number' | 'tel' | 'email' | 'password' | 'textarea';

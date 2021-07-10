@@ -250,11 +250,6 @@ type TypeMaskOption = {
 };
 const ccNumberMaskOptions: TypeMaskOption[] = [
     {
-        mask: '0000 000000 00000',
-        regex: '^3[47]\\d{0,13}',
-        cardType: 'american-express'
-    },
-    {
         mask: '0000 0000 0000 0000',
         regex: '^(?:6011|65\\d{0,2}|64[4-9]\\d?)\\d{0,12}',
         cardType: 'discover'
@@ -313,6 +308,11 @@ const ccNumberMaskOptions: TypeMaskOption[] = [
         mask: '0000 0000 0000 0000',
         regex: '^9792\\d{0,14}',
         cardType: 'troy'
+    },
+    {
+        mask: '0000 000000 00000',
+        regex: '^3[47]\\d{0,13}',
+        cardType: 'american-express'
     },
     {
         mask: '0000 0000 0000 0000',
