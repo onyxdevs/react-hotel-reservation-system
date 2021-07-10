@@ -1,5 +1,7 @@
 import _ from 'lodash';
-import IMask from 'imask';
+import IMask from 'imask/esm/imask';
+import 'imask/esm/masked/dynamic';
+import 'imask/esm/masked/pipe';
 import validatorjs from 'validator';
 
 class Logger {
