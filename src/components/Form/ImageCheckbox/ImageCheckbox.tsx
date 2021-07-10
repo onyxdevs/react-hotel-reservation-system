@@ -14,7 +14,7 @@ type TypeOption = {
 
 type TypeImageCheckboxProps = {
     id: string;
-    onChange: (id: string, value: any, validity: boolean) => void;
+    onChange: TypeInputOnChange;
     value?: string;
     validity?: boolean;
     validators?: TypeValidator[];

@@ -49,7 +49,7 @@ type TypeSelectProps = {
     options?: TypeOption[];
     id: string;
     label?: string;
-    onChange: (id: string, value: any, validity: boolean) => void;
+    onChange: TypeInputOnChange;
     value?: string | number | [];
     validity: boolean;
     validators?: TypeValidator[];

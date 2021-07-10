@@ -7,7 +7,7 @@ import formClasses from '../Form.module.scss';
 
 type TypeTextFieldProps = {
     id: string;
-    onChange: (id: string, value: any, validity: boolean) => void;
+    onChange: TypeInputOnChange;
     value?: string;
     validity?: boolean;
     validators?: TypeValidator[];
