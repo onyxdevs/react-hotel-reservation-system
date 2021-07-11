@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.3.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="0 0 750 471" style="enable-background:new 0 0 750 471;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#0079BE;}
+	.st1{fill:#FFFFFF;}
+</style>
+<g>
+	<g id="diners">
+		<path id="rectangle" class="st0" d="M40,0h670c22.1,0,40,17.9,40,40v391c0,22.1-17.9,40-40,40H40c-22.1,0-40-17.9-40-40V40
+			C0,17.9,17.9,0,40,0z"/>
+		<path id="Shape-path" class="st1" d="M584.9,237.9c0-99.4-83-168.1-173.9-168.1h-78.2c-92,0-167.7,68.7-167.7,168.1
+			c0,90.9,75.7,165.6,167.7,165.2H411C502,403.6,584.9,328.9,584.9,237.9z"/>
+		<path id="Shape-path_1_" class="st0" d="M333.3,83.9c-84.1,0-152.2,68.3-152.2,152.6c0,84.3,68.1,152.5,152.2,152.6
+			c84.1,0,152.2-68.3,152.2-152.6C485.5,152.2,417.4,84,333.3,83.9z"/>
+		<path id="Path" class="st1" d="M237.1,236.1c0.1-41.2,25.7-76.3,61.9-90.3v180.5C262.8,312.4,237.1,277.3,237.1,236.1z
+			 M368.1,326.4V145.8c36.2,13.9,61.9,49.1,62,90.3C430,277.3,404.3,312.4,368.1,326.4z"/>
+	</g>
+</g>
+</svg>

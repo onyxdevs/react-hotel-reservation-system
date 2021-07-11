@@ -35,7 +35,8 @@
         "web-vitals": "^1.1.2"
     },
     "scripts": {
-        "start": "react-scripts start",
+        "start": "node server.js",
+        "start:dev": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
@@ -62,7 +63,9 @@
     "devDependencies": {
         "@types/lodash": "^4.14.170",
         "@types/react-transition-group": "^4.4.1",
+        "express": "^4.17.1",
         "node-sass": "^6.0.1",
+        "path": "^0.12.7",
         "redux-devtools-extension": "^2.13.9"
     }
 }
