@@ -167,8 +167,8 @@ The project includes extra packages and improved file structure.
             -   utils.ts
         -   styles
             -   abstracts
-                -   mixins.scss
-                -   variables.scss
+                -   _mixins.scss
+                -   _variables.scss
             -   _reboot.css
             -   main.scss
 
