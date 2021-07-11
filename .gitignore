@@ -18,6 +18,8 @@ NOTES.md
 /build
 
 # misc
+__snapshots__
+social-preview.jpg
 .DS_Store
 .env.local
 .env.development.local
@@ -27,4 +29,3 @@ NOTES.md
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-server.js
