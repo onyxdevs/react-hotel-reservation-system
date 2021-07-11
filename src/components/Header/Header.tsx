@@ -20,7 +20,7 @@ const Header: React.FC<TypeHeader> = (props: TypeHeader) => (
                 <Button
                     type="button"
                     onClick={() => {
-                        props.stepChangeHandler(0, { isValid: false, inputs: {}, hasChanged: false }, 0);
+                        props.stepChangeHandler(0, { isValid: false, inputs: {} }, 0);
                         clearStoredValues();
                     }}
                 >

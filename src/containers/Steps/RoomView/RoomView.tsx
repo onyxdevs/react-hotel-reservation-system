@@ -93,7 +93,7 @@ const RoomView: React.FC<TypeReservationStep> = (props: TypeReservationStep) => 
                         value={formState.inputs.roomType.value}
                         validity={formState.inputs.roomType.isValid}
                         isTouched={formState.inputs.roomType.isTouched}
-                        validators={[[validatorjs.isEmpty]]}
+                        validators={[[validatorjs.isLength, { min: 1, max: undefined }]]}
                         validationMessage="Please select a room type."
                         onChange={inputHandler}
                         options={roomTypeOptions}
@@ -108,7 +108,7 @@ const RoomView: React.FC<TypeReservationStep> = (props: TypeReservationStep) => 
                         value={formState.inputs.viewType.value}
                         validity={formState.inputs.viewType.isValid}
                         isTouched={formState.inputs.viewType.isTouched}
-                        validators={[[validatorjs.isEmpty]]}
+                        validators={[[validatorjs.isLength, { min: 1, max: undefined }]]}
                         validationMessage="Please select a view type."
                         onChange={inputHandler}
                         options={viewTypeOptions}

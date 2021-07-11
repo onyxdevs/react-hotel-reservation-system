@@ -93,7 +93,7 @@ const HotelDate: React.FC<TypeReservationStep> = (props: TypeReservationStep) =>
                         value={formState.inputs.hotel.value}
                         validity={formState.inputs.hotel.isValid}
                         isTouched={formState.inputs.hotel.isTouched}
-                        validators={[[validatorjs.isEmpty]]}
+                        validators={[[validatorjs.isLength, { min: 1, max: undefined }]]}
                         validationMessage="Please select a hotel"
                     />
                 </div>

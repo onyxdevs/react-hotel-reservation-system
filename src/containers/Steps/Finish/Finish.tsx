@@ -16,7 +16,7 @@ const Finish: React.FC<TypeReservationStep> = (props: TypeReservationStep) => {
     // Go to the first step after delete
     useEffect(() => {
         if (cart.newReservation.status === 'idle' && !cart.newReservation.data.id) {
-            stepChangeHandler(0, { isValid: false, inputs: {}, hasChanged: false }, 0);
+            stepChangeHandler(0, { isValid: false, inputs: {} }, 0);
             clearStoredValues();
         }
     }, [cart.newReservation.data.id, cart.newReservation.status, stepChangeHandler]);
@@ -37,7 +37,7 @@ const Finish: React.FC<TypeReservationStep> = (props: TypeReservationStep) => {
                         <Button
                             type="button"
                             onClick={() => {
-                                stepChangeHandler(0, { isValid: false, inputs: {}, hasChanged: false }, 0);
+                                stepChangeHandler(0, { isValid: false, inputs: {} }, 0);
                                 clearStoredValues();
                             }}
                         >
@@ -46,7 +46,7 @@ const Finish: React.FC<TypeReservationStep> = (props: TypeReservationStep) => {
                         <Button
                             type="button"
                             onClick={() => {
-                                stepChangeHandler(0, { isValid: true, inputs: {}, hasChanged: true }, 0);
+                                stepChangeHandler(0, { isValid: true, inputs: {} }, 0);
                             }}
                         >
                             Update reservation

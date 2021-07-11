@@ -103,11 +103,8 @@ export const validator = (value: string, validators?: TypeValidator[]) => {
 
         if (!func || typeof func !== 'function') continue;
 
-        const falseChecksArr = ['isEmpty'];
-        const isFalseCheck = falseChecksArr.includes(func.name);
-
         const result = func(value, ...args);
-        isValid = isValid && !isFalseCheck ? result : !result;
+        isValid = isValid && result;
         if (!isValid) break;
     }
 

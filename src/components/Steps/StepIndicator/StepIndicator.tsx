@@ -20,7 +20,7 @@ const StepIndicator: React.FC<TypeStepIndicatorProps> = (props: TypeStepIndicato
     const clickHandler = () => {
         if (steps && steps.currentStep === 3) return;
         if (!isActive && isCompleted && steps) {
-            props.stepChangeHandler(steps.currentStep, { isValid: true, inputs: {}, hasChanged: true }, props.index);
+            props.stepChangeHandler(steps.currentStep, { isValid: true, inputs: {} }, props.index);
         }
     };
 

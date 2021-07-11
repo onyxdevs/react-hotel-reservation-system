@@ -142,7 +142,7 @@ const PreviewPayment: React.FC<TypeReservationStep> = (props: TypeReservationSte
                                     value={formState.inputs.month.value}
                                     validity={formState.inputs.month.isValid}
                                     isTouched={formState.inputs.month.isTouched}
-                                    validators={[[validatorjs.isEmpty]]}
+                                    validators={[[validatorjs.isLength, { min: 1, max: undefined }]]}
                                     validationMessage="Please select a valid expiration month"
                                 />
                                 <Select
@@ -171,7 +171,7 @@ const PreviewPayment: React.FC<TypeReservationStep> = (props: TypeReservationSte
                                     value={formState.inputs.year.value}
                                     validity={formState.inputs.year.isValid}
                                     isTouched={formState.inputs.year.isTouched}
-                                    validators={[[validatorjs.isEmpty]]}
+                                    validators={[[validatorjs.isLength, { min: 1, max: undefined }]]}
                                     validationMessage="Please select a valid expiration year"
                                 />
                             </div>

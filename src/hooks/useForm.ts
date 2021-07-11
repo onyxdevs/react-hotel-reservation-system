@@ -4,7 +4,6 @@ declare global {
     type TypeFormState = {
         inputs: TypeInputs;
         isValid: boolean;
-        hasChanged: boolean;
     };
 }
 
@@ -12,7 +11,6 @@ const formReducer = (state: TypeFormState, action: any) => {
     switch (action.type) {
         case 'INPUT_CHANGE':
             let formIsValid = true;
-            let formHasChanged = false;
 
             for (const inputId in state.inputs) {
                 if (!state.inputs[inputId]) continue;
@@ -45,8 +43,7 @@ const formReducer = (state: TypeFormState, action: any) => {
             return {
                 ...state,
                 inputs: newInputs,
-                isValid: formIsValid,
-                hasChanged: formHasChanged
+                isValid: formIsValid
             };
 
         default:
@@ -60,8 +57,7 @@ const useForm = (
 ): [formState: TypeFormState, inputHandler: (id: string, value: string | number, isValid: boolean) => void] => {
     const [formState, dispatch] = useReducer(formReducer, {
         inputs: initialInputs,
-        isValid: initialFormValidity,
-        hasChanged: false
+        isValid: initialFormValidity
     });
 
     const inputHandler = useCallback((id: string, value: string | number, isValid: boolean) => {
