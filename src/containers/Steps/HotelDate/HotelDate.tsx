@@ -109,10 +109,7 @@ const HotelDate: React.FC<TypeReservationStep> = (props: TypeReservationStep) =>
                         validationMessage="Please select a valid check-in date."
                         onChange={(id, value, validity) => {
                             inputHandler(id, value, validity);
-
-                            if (!formState.inputs.checkout.value) {
-                                setCheckoutValidators([[validatorjs.isDate], [validatorjs.isAfter, value]]);
-                            }
+                            setCheckoutValidators([[validatorjs.isDate], [validatorjs.isAfter, value]]);
                         }}
                     />
                     <TextField
@@ -126,14 +123,11 @@ const HotelDate: React.FC<TypeReservationStep> = (props: TypeReservationStep) =>
                         validationMessage="Please select a valid check-out date."
                         onChange={(id, value, validity) => {
                             inputHandler(id, value, validity);
-
-                            if (!formState.inputs.checkin.value) {
-                                setCheckinValidators([
-                                    [validatorjs.isDate],
-                                    [validatorjs.isAfter],
-                                    [validatorjs.isBefore, value]
-                                ]);
-                            }
+                            setCheckinValidators([
+                                [validatorjs.isDate],
+                                [validatorjs.isAfter],
+                                [validatorjs.isBefore, value]
+                            ]);
                         }}
                     />
                     <TextField

@@ -172,7 +172,7 @@ export const clearStoredValues = (): void => {
 };
 
 export const getTwoDatesDiff = (checkin: string | number, checkout: string | number): number => {
-    if (typeof checkin === 'string' && typeof checkout === 'string') {
+    if (typeof checkin === 'string' && checkin && typeof checkout === 'string' && checkout) {
         const timeDiff = new Date(checkout).getTime() - new Date(checkin).getTime();
         return timeDiff / (1000 * 3600 * 24);
     }
