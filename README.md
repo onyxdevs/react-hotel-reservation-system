@@ -3,19 +3,19 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).<br />
 The project includes extra packages and improved file structure.
 
-## Behaviour 💁
+## Behaviour 🚦
 
 -   You can always navigate between the completed steps from the steps indicators or by clicking the back button.
 -   Fields data and steps state are synced with the local storage.
 -   Now there are two stores, hotels and cart.
 
-## How to's
+## How to's 💁
 
 -   API URL can be changed from the .env file.
 -   New reducers are added in -> /src/stores/global-reducers.ts
 -   New sagas are added in -> /src/stores/global-sagas.ts
 
-### Screens
+### Screens 🖥
 
 1. **Hotel and Date Selection**
 
