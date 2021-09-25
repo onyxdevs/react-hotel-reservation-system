@@ -339,3 +339,22 @@ export const getCCNumberMaskType = (value: string): TypeMaskOption | undefined =
         }
     }
 };
+
+export const handleCatchedError = (cb: Function) => (e: any) => {
+    console.error('🔥 catched error', e);
+    if (e instanceof Error) {
+        // properly handle Error e
+        return cb(e.message);
+    } else if (typeof e === 'string' || e instanceof String) {
+        // properly handle e or...stop using libraries that throw naked strings
+    } else if (typeof e === 'number' || e instanceof Number) {
+        // properly handle e or...stop using libraries that throw naked numbers
+    } else if (typeof e === 'boolean' || e instanceof Boolean) {
+        // properly handle e or...stop using libraries that throw naked booleans
+    } else {
+        // if we can't figure out what what we are dealing with then
+        // probably cannot recover...therefore, rethrow
+        // Note to Self: Rethink my life choices and choose better libraries to use.
+        throw e;
+    }
+};

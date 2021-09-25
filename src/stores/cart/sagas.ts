@@ -10,7 +10,7 @@ import {
     deleteReservationFailed
 } from './actions';
 import api from 'lib/scripts/apis';
-import { logger, getStoredValue } from 'lib/scripts/utils';
+import { logger, getStoredValue, handleCatchedError } from 'lib/scripts/utils';
 
 export function* checkCouponSaga(payload: any): any {
     logger.debug('[saga]', 'checkCouponSaga', payload);
@@ -26,7 +26,7 @@ export function* checkCouponSaga(payload: any): any {
         }
         yield put(applyCoupon(resData[0]));
     } catch (error) {
-        yield put(applyCouponFailed(error.message));
+        yield put(handleCatchedError(applyCouponFailed)(error));
     }
 }
 
@@ -44,7 +44,7 @@ export function* newReservationSaga(payload: any): any {
         }
         yield put(setNewReservation(resData));
     } catch (error) {
-        yield put(newReservationFailed(error.message));
+        yield put(handleCatchedError(newReservationFailed)(error));
     }
 }
 
@@ -55,6 +55,6 @@ export function* deleteReservationSaga(payload: any): any {
         const resData: TypeNewReservation = yield api.deleteReservation(payload.reservationId);
         yield put(finishDeleteReservation(resData));
     } catch (error) {
-        yield put(deleteReservationFailed(error.message));
+        yield put(handleCatchedError(deleteReservationFailed)(error));
     }
 }
