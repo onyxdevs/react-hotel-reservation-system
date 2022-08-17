@@ -53,20 +53,20 @@ The project includes extra packages and improved file structure.
 
 ```json
 {
-    "hotel_id": 3,
-    "start_date": "2021-01-20",
-    "end_date": "2021-02-20",
-    "adult": 10,
-    "child": 2,
-    "room_type": 2,
-    "room_scenic": 3,
-    "price": 7676,
-    "coupon_code": "CODE100",
-    "card_name": "Obada Qawwas",
-    "card_number": "1111222233334444",
-    "card_date_month": "01",
-    "card_date_year": "2030",
-    "card_cvv": "999"
+	"hotel_id": 3,
+	"start_date": "2021-01-20",
+	"end_date": "2021-02-20",
+	"adult": 10,
+	"child": 2,
+	"room_type": 2,
+	"room_scenic": 3,
+	"price": 7676,
+	"coupon_code": "CODE100",
+	"card_name": "Obada Qawwas",
+	"card_number": "1111222233334444",
+	"card_date_month": "01",
+	"card_date_year": "2030",
+	"card_cvv": "999"
 }
 ```
 
@@ -111,107 +111,88 @@ The project includes extra packages and improved file structure.
 ## Folders and files structure 🗺
 
 ```
--   src
-
-    -   components // reusable react components
-
-        -   Button
-        -   CreditCard
-        -   Form
-            -   ImageCheckbox
-            -   Select
-            -   TextField
-        -   Header
-        -   Portlet
-        -   ProgressIndicators
-        -   ReservationDetails
-            -   ReservationCoupon
-            -   ReservationDetailsItem
-            -   ReservationTotals
-        -   Steps
-            -   StepIndicator
-        index.ts // Exports all the public components
-
-        // Each component has the following structure:
-
-        -   -   ComponentName
-                -   ComponentName.module.scss
-                -   ComponentName.test.tsx
-                -   ComponentName.tsx
-                -   index.ts
-
-    -   containers
-
-        -   App
-        -   Steps
-            -   HotelDate
-            -   RoomView
-            -   PreviewPayment
-            -   Finish
-
-    -   hocs
-
-        -   withErrorHandler.tsx
-
-    -   hooks
-
-        -   useCart.ts
-        -   useCreditCard.ts
-        -   useForm.ts
-        -   useHotels.ts
-        -   useLocalStorage.ts
-        -   useSteps.ts
-
-    -   lib // helpers
-
-        -   media
-            -   icons
-            -   payment
-
-        -   scripts
-            -   apis.ts // All API requests
-            -   axios.ts
-            -   utils.ts
-        -   styles
-            -   abstracts
-                -   _mixins.scss
-                -   _variables.scss
-            -   _reboot.css
-            -   main.scss
-
-    -   stores
-
-        -   cart
-            -   actions.ts
-            -   constants.ts
-            -   reducers.ts
-            -   sagas.ts
-        -   hotels
-            -   actions.ts
-            -   constants.ts
-            -   reducers.ts
-            -   sagas.ts
-        -   global-reducers.ts // state's reducers, add new reducers here
-        -   global-sagas.ts // connect sagas here
-        -   index.ts // Redux store implementation
-
-    -   Types // Just the global types
-        -   TypeAppProps.ts
-        -   TypeCartDetails.ts
-        -   TypeCoupon.ts
-        -   TypeHotel.ts
-        -   TypeHotelDetails.ts
-        -   TypeInput.ts
-        -   TypeNewReservation.ts
-        -   TypeReservationStep.ts
-        -   TypeStep.ts
-
-    -   config.ts // App's config, now it only contains API_URL
-    -   index.tsx
-    -   react-app-env.d.ts
-    -   reportWebVitals.ts
-    -   setupTests.ts
-
+src
+├── components // reusable react components
+│   ├── Button
+│   ├── CreditCard
+│   ├── Form
+│   │   ├── ImageCheckbox
+│   │   ├── Select
+│   │   └── TextField
+│   ├── Header
+│   ├── Portlet
+│   ├── ProgressIndicators
+│   ├── ReservationDetails
+│   │   ├── ReservationCoupon
+│   │   ├── ReservationDetailsItem
+│   │   └── ReservationTotals
+│   ├── Steps
+│   │   └── StepIndicator
+│   ├── index.ts // Exports all the public components
+│   └── ComponentName // Each component has the following structure
+│       ├── ComponentName.module.scss
+│       ├── ComponentName.test.tsx
+│       ├── ComponentName.tsx
+│       └── index.ts
+├── containers
+│   ├── App
+│   └── Steps
+│       ├── HotelDate
+│       ├── RoomView
+│       ├── PreviewPayment
+│       └── Finish
+├── hocs
+│   └── withErrorHandler.tsx
+├── hooks
+│   ├── useCart.ts
+│   ├── useCreditCard.ts
+│   ├── useForm.ts
+│   ├── useHotels.ts
+│   ├── useLocalStorage.ts
+│   └── useSteps.ts
+├── lib // helpers
+│   ├── media
+│   │   ├── icons
+│   │   └── payment
+│   ├── scripts
+│   │   ├── axios.ts
+│   │   └── utils.ts
+│   └── styles
+│       ├── abstracts
+│       │   ├── _mixins.scss
+│       │   └── _variables.scss
+│       ├── _reboot.css
+│       └── main.scss
+├── stores
+│   ├── cart
+│   │   ├── actions.ts
+│   │   ├── constants.ts
+│   │   ├── reducers.ts
+│   │   └── sagas.ts
+│   ├── hotels
+│   │   ├── actions.ts
+│   │   ├── constants.ts
+│   │   ├── reducers.ts
+│   │   └── sagas.ts
+│   ├── global-reducers.ts // state's reducers, add new reducers here
+│   ├── global-sagas.ts // connect sagas here
+│   └── index.ts // Redux store implementation
+├── Types // Just the global types
+│   ├── TypeAppProps.ts
+│   ├── TypeCartDetails.ts
+│   ├── TypeCoupon.ts
+│   ├── TypeHotel.ts
+│   ├── TypeHotelDetails.ts
+│   ├── TypeInput.ts
+│   ├── TypeNewReservation.ts
+│   ├── TypeReservationStep.ts
+│   └── TypeStep.ts
+├── apis.ts // All API requests
+├── config.ts // App's config, now it only contains API_URL
+├── index.tsx
+├── react-app-env.d.ts
+├── reportWebVitals.ts
+└── setupTests.ts
 ```
 
 ## Dependencies that were added to CRA 👷🏼‍♀️
