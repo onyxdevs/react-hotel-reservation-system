@@ -61,7 +61,7 @@ const getCartInitialState = (): TypeCartInitialState => {
         },
         newReservation: {
             data: {
-                id: reservationId
+                id: reservationId ? +reservationId : 0
             },
             status: 'idle',
             error: ''

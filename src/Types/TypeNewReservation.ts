@@ -1,5 +1,6 @@
 declare global {
     type TypeNewReservation = {
+        id?: number;
         hotel_id?: number;
         start_date?: string;
         end_date?: string;
@@ -14,7 +15,6 @@ declare global {
         card_date_month?: string;
         card_date_year?: string;
         card_cvv?: string;
-        id?: string;
     };
 }
 

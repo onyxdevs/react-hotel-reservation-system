@@ -138,7 +138,7 @@ export const setNewReservation = (payload: TypeNewReservation) => {
 
     // Save reservationId
     if (payload.id) {
-        localStorage.setItem('reservationId', payload.id);
+        localStorage.setItem('reservationId', payload.id.toString());
     }
 
     return {
