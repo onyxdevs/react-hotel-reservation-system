@@ -9,7 +9,7 @@ import {
     finishDeleteReservation,
     deleteReservationFailed
 } from './actions';
-import api from 'lib/scripts/apis';
+import api from 'apis';
 import { logger, getStoredValue, handleCatchedError } from 'lib/scripts/utils';
 
 export function* checkCouponSaga(payload: any): any {

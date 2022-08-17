@@ -1,7 +1,7 @@
 import { put } from 'redux-saga/effects';
 
 import { setHotels, fetchHotelsFailed } from './actions';
-import api from 'lib/scripts/apis';
+import api from 'apis';
 import { logger, handleCatchedError } from 'lib/scripts/utils';
 
 export function* getHotelsSaga(): any {
