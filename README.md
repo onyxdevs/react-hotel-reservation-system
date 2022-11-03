@@ -213,7 +213,7 @@ Install [Node.js](https://nodejs.org/) and then open the Terminal/CMD and naviga
 Run the following command:
 
 ```bash
-npm insatll
+npm install
 ```
 
 ### Development evnironment
