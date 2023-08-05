@@ -1,8 +1,7 @@
 import React from 'react';
 
-import { CircularProgress } from 'components';
-
 import styleClasses from './Button.module.scss';
+import { CircularProgress } from '..';
 
 type TypeButtonProps = {
     extraClasses?: string;

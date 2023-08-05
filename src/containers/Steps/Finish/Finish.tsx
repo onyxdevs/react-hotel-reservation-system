@@ -1,12 +1,11 @@
 import React, { useEffect } from 'react';
 
-import { useCart } from 'hooks';
-import { Portlet, Button, ReservationDetails } from 'components';
-import { clearStoredValues } from 'lib/scripts/utils';
-
 import styleClasses from './Finish.module.scss';
 
-import fireworks from 'lib/media/icons/fireworks.svg';
+import fireworks from '../../../lib/media/icons/fireworks.svg';
+import { useCart } from '../../../hooks';
+import { clearStoredValues } from '../../../lib/scripts/utils';
+import { Button, Portlet, ReservationDetails } from '../../../components';
 
 const Finish: React.FC<TypeReservationStep> = (props: TypeReservationStep) => {
     const { cart, dispatchDeleteReservation } = useCart();

@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import validatorjs from 'validator';
 
-import { useForm, useLocalStorage, useCart, useCreditCard } from 'hooks';
-import { Portlet, Button, CreditCard, ReservationDetails, Select, TextField } from 'components';
-import { getCreditCardYears, getCreditCardMonths, isValidName, ccNumberMaskPipe } from 'lib/scripts/utils';
-
-import formClasses from 'components/Form/Form.module.scss';
+import formClasses from '../../../components/Form/Form.module.scss';
 import styleClasses from './PreviewPayment.module.scss';
+import { useCart, useCreditCard, useForm, useLocalStorage } from '../../../hooks';
+import { ccNumberMaskPipe, getCreditCardMonths, getCreditCardYears, isValidName } from '../../../lib/scripts/utils';
+import { Button, CreditCard, Portlet, ReservationDetails, Select, TextField } from '../../../components';
 
 declare global {
     type TypeCardDetails = {

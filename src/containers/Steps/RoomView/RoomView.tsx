@@ -1,11 +1,10 @@
 import React from 'react';
 import validatorjs from 'validator';
 
-import { useForm, useLocalStorage, useCart, useHotels } from 'hooks';
-import { Portlet, Button, ReservationDetails, ImageCheckbox } from 'components';
-import { getTotalPrice } from 'lib/scripts/utils';
-
-import formClasses from 'components/Form/Form.module.scss';
+import formClasses from '../../../components/Form/Form.module.scss';
+import { useCart, useForm, useHotels, useLocalStorage } from '../../../hooks';
+import { getTotalPrice } from '../../../lib/scripts/utils';
+import { Button, ImageCheckbox, Portlet, ReservationDetails } from '../../../components';
 
 type TypeRoomOptions = {
     id: string;

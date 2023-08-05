@@ -2,10 +2,9 @@ import React, { memo } from 'react';
 import ReactSelect from 'react-select';
 import _ from 'lodash';
 
-import { validator, logger } from 'lib/scripts/utils';
-
 import './Select.scss';
 import formClasses from '../Form.module.scss';
+import { logger, validator } from '../../../lib/scripts/utils';
 
 /**
  * Create option from a value

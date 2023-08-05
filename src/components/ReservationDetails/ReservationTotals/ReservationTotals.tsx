@@ -1,8 +1,7 @@
 import React from 'react';
 
-import { useCart } from 'hooks';
-
 import styleClasses from './ReservationTotals.module.scss';
+import { useCart } from '../../../hooks';
 
 type TypeReservationTotalsProps = {};
 

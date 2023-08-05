@@ -1,71 +1,42 @@
 {
-    "name": "react-hotel-reservation-system",
-    "version": "0.1.0",
-    "author": {
-        "name": "Obada Qawwas",
-        "email": "info@onyxdev.net",
-        "url": "https://onyxdev.net"
-    },
-    "homepage": "https://onyxdev.net/files/battlefield/react/react-hotel-reservation-system/",
-    "engines": {
-        "node": "^14.17.0"
-    },
-    "private": true,
-    "dependencies": {
-        "@testing-library/jest-dom": "^5.14.1",
-        "@testing-library/react": "^11.2.7",
-        "@testing-library/user-event": "^12.8.3",
-        "@types/jest": "^26.0.23",
-        "@types/node": "^12.20.15",
-        "@types/react": "^17.0.13",
-        "@types/react-dom": "^17.0.8",
-        "@types/react-select": "^4.0.16",
-        "@types/validator": "^13.6.1",
-        "axios": "^0.21.1",
-        "imask": "^6.1.0",
-        "lodash": "^4.17.21",
-        "react": "^17.0.2",
-        "react-dom": "^17.0.2",
-        "react-redux": "^7.2.4",
-        "react-scripts": "5.0.1",
-        "react-select": "^4.3.1",
-        "redux": "^4.1.0",
-        "redux-saga": "^1.1.3",
-        "typescript": "^4.3.5",
-        "validator": "^13.6.0",
-        "web-vitals": "^1.1.2"
-    },
-    "scripts": {
-        "start": "react-scripts start",
-        "build": "react-scripts build",
-        "test": "react-scripts test",
-        "eject": "react-scripts eject",
-        "heroku-postbuild": "npm rebuild node-sass && npm install --unsafe-perm -f node-sass"
-    },
-    "eslintConfig": {
-        "extends": [
-            "react-app",
-            "react-app/jest"
-        ]
-    },
-    "browserslist": {
-        "production": [
-            ">0.2%",
-            "not dead",
-            "not op_mini all"
-        ],
-        "development": [
-            "last 1 chrome version",
-            "last 1 firefox version",
-            "last 1 safari version"
-        ]
-    },
-    "devDependencies": {
-        "@types/lodash": "^4.14.170",
-        "@types/react-transition-group": "^4.4.1",
-        "express": "^4.17.1",
-        "node-sass": "^6.0.1",
-        "path": "^0.12.7",
-        "redux-devtools-extension": "^2.13.9"
-    }
+  "name": "client",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "imask": "^7.1.3",
+    "lodash": "^4.17.21",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-query": "^3.39.3",
+    "react-redux": "^8.1.2",
+    "react-select": "^5.7.4",
+    "redux": "^4.2.1",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-saga": "^1.2.3",
+    "sass": "^1.64.2",
+    "socket.io-client": "^4.7.1",
+    "validator": "^13.11.0"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.196",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@types/validator": "^13.9.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@vitejs/plugin-react": "^4.0.3",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5"
+  }
 }

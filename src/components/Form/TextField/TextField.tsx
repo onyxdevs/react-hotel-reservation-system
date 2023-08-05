@@ -1,9 +1,9 @@
 import React, { ChangeEvent, memo } from 'react';
 
-import { validator, logger, compareProps } from 'lib/scripts/utils';
 
 import inputClasses from './TextField.module.scss';
 import formClasses from '../Form.module.scss';
+import { validator, logger, compareProps } from '../../../lib/scripts/utils';
 
 type TypeTextFieldProps = {
     id: string;

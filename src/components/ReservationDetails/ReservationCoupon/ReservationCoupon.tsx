@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 
-import { useCart } from 'hooks';
-import { Button, TextField } from 'components';
-
 import styleClasses from './ReservationCoupon.module.scss';
+import { useCart } from '../../../hooks';
+import { Button, TextField } from '../..';
 
 type TypeReservationCouponProps = {};
 

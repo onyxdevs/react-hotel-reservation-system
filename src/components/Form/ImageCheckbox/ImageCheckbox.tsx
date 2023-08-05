@@ -1,6 +1,6 @@
 import React, { ChangeEvent, memo } from 'react';
 
-import { validator, logger, compareProps } from 'lib/scripts/utils';
+import { validator, logger, compareProps } from '../../../lib/scripts/utils';
 
 import checkboxClasses from './ImageCheckbox.module.scss';
 import formClasses from '../Form.module.scss';

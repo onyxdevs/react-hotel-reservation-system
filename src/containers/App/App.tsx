@@ -1,15 +1,17 @@
 import React, { useEffect } from 'react';
 import { ConnectedProps } from 'react-redux';
 
-import withErrorHandler from 'hocs/withErrorHandler';
+// import withErrorHandler from 'hocs/withErrorHandler';
 import connector from './connector';
-import { CircularProgress, Header, Steps, StepsIndicator } from 'components';
-import { HotelDate, PreviewPayment, RoomView, Finish } from 'containers/Steps';
-import { useSteps } from 'hooks';
+// import { CircularProgress, Header, Steps, StepsIndicator } from 'components';
+import { HotelDate, PreviewPayment, RoomView, Finish } from '../Steps';
 
-import iconCalendar from 'lib/media/icons/calendar.svg';
-import iconBed from 'lib/media/icons/bed.svg';
-import iconCreditCard from 'lib/media/icons/credit-card.svg';
+import iconCalendar from '../../lib/media/icons/calendar.svg';
+import iconBed from '../../lib/media/icons/bed.svg';
+import iconCreditCard from '../../lib/media/icons/credit-card.svg';
+import { useSteps } from '../../hooks';
+import { CircularProgress, Header, Steps, StepsIndicator } from '../../components';
+import withErrorHandler from '../../hocs/withErrorHandler';
 
 type TypeAppReduxProps = ConnectedProps<typeof connector>;
 

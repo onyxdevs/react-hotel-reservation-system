@@ -1,8 +1,7 @@
 import React from 'react';
 
-import { getStoredValue } from 'lib/scripts/utils';
-
 import styleClasses from './StepIndicator.module.scss';
+import { getStoredValue } from '../../../lib/scripts/utils';
 
 type TypeStepIndicatorProps = {
     imgUrl: string;

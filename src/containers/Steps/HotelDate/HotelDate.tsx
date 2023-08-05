@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import validatorjs from 'validator';
 
-import { useForm, useLocalStorage, useHotels } from 'hooks';
-import { Portlet, Button, Select, TextField } from 'components';
-
-import formClasses from 'components/Form/Form.module.scss';
+// import { useForm, useLocalStorage, useHotels } from '../../../../vite/src/hooks';
+// import { Portlet, Button, Select, TextField } from 'components';
+import formClasses from '../../../components/Form/Form.module.scss';
+import { useForm, useHotels, useLocalStorage } from '../../../hooks';
+import { Button, Portlet, Select, TextField } from '../../../components';
 
 let afterTwoDays: string | Date = new Date();
 afterTwoDays.setDate(afterTwoDays.getDate() + 1);

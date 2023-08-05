@@ -1,12 +1,13 @@
 import React from 'react';
 
-import { useHotels, useCart } from 'hooks';
+// import { useHotels, useCart } from '../../../vite/src/hooks';
 import ReservationDetailsItem from './ReservationDetailsItem';
 import ReservationCoupon from './ReservationCoupon';
 import ReservationTotals from './ReservationTotals';
 
 import styleClasses from './ReservationDetails.module.scss';
 import itemStyleClasses from './ReservationDetailsItem/ReservationDetailsItem.module.scss';
+import { useCart, useHotels } from '../../hooks';
 
 type TypeDetail = 'checkin' | 'checkout' | 'adults' | 'children' | 'room' | 'view' | 'coupon' | 'totals';
 type TypeReservationDetailsProps = {

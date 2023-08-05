@@ -1,9 +1,7 @@
 import React from 'react';
-
-import { Button } from 'components';
-import { clearStoredValues } from 'lib/scripts/utils';
-
 import styleClasses from './Header.module.scss';
+import { Button } from '..';
+import { clearStoredValues } from '../../lib/scripts/utils';
 
 type TypeHeader = {
     activeStep?: number;
